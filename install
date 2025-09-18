@@ -534,7 +534,7 @@ function Download(){
     echo -e "${BIBlue}╰══════════════════════════════════════════╯${NC}"
     res12
 }
-Download# Memanggil fungsi SKT4100
+Download # Memanggil fungsi SKT4100
 
 # --- Konfigurasi Post-Instalasi ---
 # Pastikan file /home/re_otm ada dan berikan nilai default jika tidak
