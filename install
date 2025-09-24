@@ -641,17 +641,17 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 IZIN=$(curl -sS https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $MYIP | awk '{print $3}' )
 d1=$(date -d "$IZIN" +%s)
 d2=$(date -d "$today" +%s)
-USRSC=$(wget -qO- https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $ipsaya | awk '{print $2}')
-EXPSC=$(wget -qO- https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $ipsaya | awk '{print $3}')
+USRSC=$(wget -qO- https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $MYIP | awk '{print $2}')
+EXPSC=$(wget -qO- https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $MYIP | awk '{print $3}')
 TEXT="
 <code>⚡───────────────────⚡</code>
 <b> INSTALL AUTOSCRIPT PREMIUM</b>
 <code>⚡───────────────────⚡</code>
 <code>ID    : </code><code>$USRSC</code>
-<code>Date  : </code><code>$TIME</code>
-<code>Exp   : </code><code>$EXPSC</code>
-<code>Name : </code><code>$name</code>
+<code>DATE  : </code><code>$TIME</code>
+<code>EXP   : </code><code>$EXPSC</code>
 <code>ISP   : </code><code>$ISP</code>
+<code>SC ID : </code><code>UBUNTU 22-25</code>
 <code>⚡───────────────────⚡</code>
 <i>Automatic Notification Install Script</i>
 "'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"https://t.me/freetunnel3"},{"text":"JOIN","url":"t.me/ftp_corp"}]]}'
