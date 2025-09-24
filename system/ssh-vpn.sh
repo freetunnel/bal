@@ -139,7 +139,7 @@ apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 curl https://raw.githubusercontent.com/freetunnel/bal/main/system/nginx.conf > /etc/nginx/nginx.conf
-curl https://raw.githubusercontent.com/freetunnel/bal/main/SYSTEM/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://raw.githubusercontent.com/freetunnel/bal/main/system/vps.conf > /etc/nginx/conf.d/vps.conf
 sudo sed -i 's|listen = /var/run/php-fpm.sock|listen = 127.0.0.1:9000|g' /etc/php/8.3/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
