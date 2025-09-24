@@ -6,8 +6,9 @@ Skrip ini dibuat untuk **mematikan AppArmor total** di Ubuntu 22 / 24 / 25.
 ## 🚀 Cara Jalankan Langsung
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/freetunnel/bal/main/disarmor.sh)
+```
 
-## 2. UPDATE 
+## UPDATE
 
 ```
 cd root
