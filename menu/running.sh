@@ -195,12 +195,6 @@ if [[ $trojan_server == "running" ]]; then
 else
    status_virus_trojan="${RED}Offline ${NC}"
 fi
-# STATUS SERVICE TROJAN-GO
-if [[ $trgoo == "running" ]]; then
-   status_trgo=" ${GREEN}Online ${NC}"
-else
-   status_trgo="${RED}Offline ${NC}"
-fi
 # STATUS SERVICE DROPBEAR
 if [[ $dropbear_status == "running" ]]; then
    status_beruangjatuh=" ${GREEN}Online${NC}"
@@ -263,15 +257,6 @@ else
    status_shadowsocks="${RED}Offline ${NC}"
 fi
 
-# STATUS NOOBZVPNS
-if [[ $noobz == "running" ]]; then 
-   noobz=" ${GREEN}Online ${NC}"
-else
-   noobz="${RED}Offline ${NC}"
-fi
-
-
-
 # TOTAL RAM
 total_ram=`grep "MemTotal: " /proc/meminfo | awk '{ print $2}'`
 totalram=$(($total_ram/1024))
@@ -289,7 +274,7 @@ datediff() {
 mai="datediff "$Exp" "$DATE""
 
 today=`date -d "0 days" +"%Y-%m-%d"`
-Exp2=$(curl -sS https://raw.githubusercontent.com/king-vpn/permission/main/ip | grep $MYIP | awk '{print $3}')
+Exp2=$(curl -sS https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $MYIP | awk '{print $3}')
 
 # CERTIFICATE STATUS
 d1=$(date -d "$Exp2" +%s)
@@ -298,7 +283,7 @@ certificate=$(( (d1 - d2) / 86400 ))
 
 # DNS PATCH
 #tipeos2=$(uname -m)
-Name2=$(curl -sS https://raw.githubusercontent.com/king-vpn/permission/main/ip | grep $MYIP | awk '{print $2}')
+Name2=$(curl -sS https://raw.githubusercontent.com/freetunnel/iz/main/ip | grep $MYIP | awk '{print $2}')
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e ""
@@ -338,8 +323,8 @@ echo -e "$COLOR1 $NC  ${WH}❈ Shadowsocks             ${COLOR1}: ${WH}$status_s
 echo -e "$COLOR1 $NC  ${WH}❈ Websocket TLS           ${COLOR1}: ${WH}$swstls${NC}"
 echo -e "$COLOR1 $NC  ${WH}❈ Websocket None TLS      ${COLOR1}: ${WH}$swstls${NC}"
 echo -e "$COLOR1 $NC  ${WH}❈ Websocket None TLS      ${COLOR1}: ${WH}$swstls${NC}"
-echo -e "$COLOR1 $NC  ${WH}❈ NOOBZVPNS               ${COLOR1}: ${WH}$noobz${NC}"
-echo -e "$COLOR1 $NC  ${WH}❈ TROJAN-GO               ${COLOR1}: ${WH}$status_trgo${NC}"
+#echo -e "$COLOR1 $NC  ${WH}❈ NOOBZVPNS               ${COLOR1}: ${WH}$noobz${NC}"
+#echo -e "$COLOR1 $NC  ${WH}❈ TROJAN-GO               ${COLOR1}: ${WH}$status_trgo${NC}"
 echo -e "$COLOR1 $NC  ${WH}❈ SSH UDP COSTUM          ${COLOR1}: ${WH}$udp${NC}"
 echo -e "$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═══════════════════════════════════════════════════╮${NC}"
