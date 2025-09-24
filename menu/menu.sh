@@ -305,27 +305,24 @@ echo -e " $COLOR1│$NC${WH} ❈ NSDomain      ${COLOR1}: ${WH}$(cat /etc/xray/d
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e "    $COLOR1╭═════════════════ • ${NC}${WH}STATUS SERVER${NC}${COLOR1} • ═══════════════╮${NC}"
 echo -e "     ${WH} SSH WS : ${status_ws} ${WH} XRAY : ${status_xray} ${WH} NGINX : ${status_nginx} ${WH} DROPBEAR : ${status_beruangjatuh}$NC"
-echo -e "      ${WH} UDP CUSTOM : ${status_udp} ${WH} NOOBZVPNS : ${stat_noobz} ${WH} TROJAN-GO : ${stat_trgo} ${NC}"
 echo -e "    $COLOR1╰═══════════════════════════════════════════════════╯${NC}"
 echo -e "       $COLOR1╭════════════ •${NC} ${WH}ACCOUNT PREMIUM${NC} $COLOR1• ════════════╮${NC}"
 printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " SSH/OPVPN   =" "$total_ssh" "ACCOUNT "
 printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VMESS/WS    =" "$vmess" "ACCOUNT "
 printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VLESS/WS    =" "$vless" "ACCOUNT "
 printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " TROJAN/GRPC =" "$trtls" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " NOOBZVPNS   =" "$jumlah_noobz" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " TROJAN-GO   =" "$jumlah_trgo" "ACCOUNT "
 echo -e "      $COLOR1╰═════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭═════════════════════ • ${WH}LIST MENU${NC}${COLOR1} • ════════════════════╮${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}BOT PANEL  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}BOT NOTIF  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"    
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UPDATE     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"   
 echo -e " $COLOR1│$NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}TROJAN    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SYSTEM     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}NOOBZVPNS ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}TROJAN-GO ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}REBOOT     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}22${WH}]${NC} ${COLOR1}• ${WH}RUNNING   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}23${WH}]${NC} ${COLOR1}• ${WH}RESTART    ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}RUNNING   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}RESTART   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}REBOOT     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
 echo -e " $COLOR1╰════════════════════════════════════════════════════════╯${NC}"
-echo -e "$COLOR1╭════════════════════ • ${WH}PANEL ADMIN VIP${NC}${COLOR1} • ════════════════╮${NC}"
+echo -e "$COLOR1╭════════════════════ • ${WH}PANEL MENU LAIN${NC}${COLOR1} • ════════════════╮${NC}"
 echo -e "$COLOR1│  ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}RESELLER IP ${WH}[${COLOR1}MENU${WH}] $NC"
+echo -e "$COLOR1│  ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}CEK USER ONLINE ${WH}[${COLOR1}MENU${WH}] $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1│$NC  ${WH}Total    $COLOR1│${NC}     ${WH}Today       ${WH}Yesterday       ${WH}Month         ${NC}"
@@ -380,9 +377,7 @@ fun_bar() {
 }
 res1() {
     systemctl restart nginx
-    systemctl restart trojan-go
     systemctl restart xray
-    systemctl restart noobzvpns
     systemctl restart daemon
     systemctl restart udp-custom
     systemctl restart ws-dropbear
@@ -412,7 +407,7 @@ menu
 function updatews(){
 cd
 rm -rf *
-wget https://raw.githubusercontent.com/Freetunnel/hpp/main/m-update.sh
+wget https://raw.githubusercontent.com/Freetunnel/bal/main/menu/m-update.sh
 clear
 chmod +x m-update.sh && ./m-update.sh
 }
@@ -429,8 +424,8 @@ case $opt in
 02 | 2) clear ; m-vmess ;;
 03 | 3) clear ; m-vless ;;
 04 | 4) clear ; m-trojan ;;
-05 | 5) clear ; m-noobz ;;
-06 | 6) clear ; m-trgo ;;
+05 | 5) clear ; running ;;
+06 | 6) clear ; restartservice ;;
 07 | 7) clear ; m-bot  ;;
 08 | 8) clear ; m-bot2 ;;
 09 | 9) clear ; updatews ;;
@@ -438,8 +433,7 @@ case $opt in
 11 | 11) clear ; m-backup;;
 12 | 12) clear ; reboot ;;
 13 | 13) clear ; m-ip2 ;;
-22 | 22) clear ; running;;
-23 | 23) clear ; restartservice ;;
+14 | 14) clear ; online;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;
 esac
