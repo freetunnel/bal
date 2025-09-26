@@ -660,6 +660,12 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
 clear
 sleep 2
 
+systemctl stop ssh.socket
+systemctl disable ssh.socket
+
+systemctl enable ssh
+systemctl restart ssh
+
 # --- Selesai Instalasi dan Reboot ---
 echo -e "${BIBlue}════════════════════════════════════════${NC}"
 echo -e "${BIBlue} Script telah berhasil di install"
@@ -668,6 +674,7 @@ rm -rf *
 echo -e ""
 echo -e "❏━━━━━━━━━━━✦ SYSTEM NOTICE ✦━━━━━━━━━━━❏"
 echo -e "\e[1;31M  PLEASE REBOOT THE SERVER \e[0m"
+echo -e "\e[1;31M  NEW PORT LOGIN VPS : 200 \e[0m"
 echo -e "❏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━❏"
 echo -en "\e[1;36m[default y](y/n)?\e[0m > "
 
