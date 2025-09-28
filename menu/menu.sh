@@ -71,10 +71,6 @@ elif [ ! -e /etc/trojan ]; then
 mkdir -p /etc/trojan
 elif [ ! -e /etc/trojan/listlock ]; then
 echo "" > /etc/trojan/listlock
-elif [ ! -e /etc/xray/noob ]; then
-echo "" > /etc/xray/noob
-elif [ ! -e /etc/trojan-go/trgo ]; then
-echo "" > /etc/trojan-go/trgo
 fi
 clear
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
@@ -151,14 +147,6 @@ else
 status_xray="${RED}OFF${NC}"
 fi
 
-stat_noobz=$( systemctl status noobzvpns | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
-if [[ $stat_noobz == "running" ]]; then
-    stat_noobz="${COLOR1}ON${NC}"
-else
-    stat_noobz="${RED}OFF${NC}"
-    systemctl start noobzvpns
-fi
-
 # // Dropbear
 dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
 if [[ $dropbear_status == "running" ]]; then
@@ -174,16 +162,6 @@ else
     status_udp="${RED}OFF${NC}"
     systemctl start udp-custom
 fi
-
-stat_trgo=$( systemctl status trojan-go | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
-if [[ $stat_trgo == "running" ]]; then
-    stat_trgo="${COLOR1}ON${NC}"
-else
-    stat_trgo="${RED}OFF${NC}"
-    systemctl start trojan-go
-fi
-
-
 
 # STATUS EXPIRED ACTIVE
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
@@ -204,10 +182,7 @@ vless=$(grep -c -E "^#vlg " "/etc/xray/config.json")
 trtls=$(grep -c -E "^#trg " "/etc/xray/config.json")
 # TOTAL CREATE ACC SSH
 total_ssh=$(grep -c -E "^### " "/etc/xray/ssh")
-# TOTAL CREATE ACC NOOBZ
-jumlah_noobz=$(grep -c -E "^### " "/etc/xray/noob")
-# TOTAL CREATE ACC TROJAN-GO
-jumlah_trgo=$(grep -c -E "^### " "/etc/trojan-go/trgo")
+
 function m-ip2(){
 clear
 cd
